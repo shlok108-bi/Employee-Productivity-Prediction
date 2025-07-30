@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict - Employee Productivity Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <nav class="bg-blue-600 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">Employee Productivity Prediction</h1>
+            <div>
+                <a href="/" class="text-white mx-4 hover:underline">Home</a>
+                <a href="/about" class="text-white mx-4 hover:underline">About</a>
+                <a href="/predict" class="text-white mx-4 hover:underline">Predict</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto p-6">
+        <h2 class="text-3xl font-bold mb-4">Enter Data for Prediction</h2>
+        <form action="/submit" method="POST" class="grid grid-cols-2 gap-4">
+            <div>
+                <label for="quarter" class="block text-lg">Quarter:</label>
+                <select name="quarter" class="w-full p-2 border rounded">
+                    <option value="Quarter1">Quarter1</option>
+                    <option value="Quarter2">Quarter2</option>
+                    <option value="Quarter3">Quarter3</option>
+                    <option value="Quarter4">Quarter4</option>
+                    <option value="Quarter5">Quarter5</option>
+                </select>
+            </div>
+            <div>
+                <label for="department" class="block text-lg">Department:</label>
+                <select name="department" class="w-full p-2 border rounded">
+                    <option value="sweing">Sewing</option>
+                    <option value="finishing">Finishing</option>
+                </select>
+            </div>
+            <div>
+                <label for="day" class="block text-lg">Day:</label>
+                <select name="day" class="w-full p-2 border rounded">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+            </div>
+            <div>
+                <label for="team" class="block text-lg">Team:</label>
+                <input type="number" name="team" class="w-full p-2 border rounded" min="1" max="12" required>
+            </div>
+            <div>
+                <label for="targeted_productivity" class="block text-lg">Targeted Productivity:</label>
+                <input type="number" name="targeted_productivity" class="w-full p-2 border rounded" step="0.01" min="0" max="1" required>
+            </div>
+            <div>
+                <label for="smv" class="block text-lg">SMV:</label>
+                <input type="number" name="smv" class="w-full p-2 border rounded" step="0.01" min="0" required>
+            </div>
+            <div>
+                <label for="over_time" class="block text-lg">Over Time (minutes):</label>
+                <input type="number" name="over_time" class="w-full p-2 border rounded" min="0" required>
+            </div>
+            <div>
+                <label for="incentive" class="block text-lg">Incentive:</label>
+                <input type="number" name="incentive" class="w-full p-2 border rounded" min="0" required>
+            </div>
+            <div>
+                <label for="idle_time" class="block text-lg">Idle Time (minutes):</label>
+                <input type="number" name="idle_time" class="w-full p-2 border rounded" min="0" required>
+            </div>
+            <div>
+                <label for="idle_men" class="block text-lg">Idle Men:</label>
+                <input type="number" name="idle_men" class="w-full p-2 border rounded" min="0" required>
+            </div>
+            <div>
+                <label for="no_of_style_change" class="block text-lg">No. of Style Changes:</label>
+                <input type="number" name="no_of_style_change" class="w-full p-2 border rounded" min="0" required>
+            </div>
+            <div>
+                <label for="no_of_workers" class="block text-lg">No. of Workers:</label>
+                <input type="number" name="no_of_workers" class="w-full p-2 border rounded" min="0" required>
+            </div>
+            <div>
+                <label for="month" class="block text-lg">Month:</label>
+                <input type="number" name="month" class="w-full p-2 border rounded" min="1" max="12" required>
+            </div>
+            <div class="col-span-2">
+                <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

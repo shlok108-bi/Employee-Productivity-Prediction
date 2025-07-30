@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Employee Productivity Prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+    <nav class="bg-blue-600 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-white text-2xl font-bold">Employee Productivity Prediction</h1>
+            <div>
+                <a href="/" class="text-white mx-4 hover:underline">Home</a>
+                <a href="/about" class="text-white mx-4 hover:underline">About</a>
+                <a href="/predict" class="text-white mx-4 hover:underline">Predict</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto p-6">
+        <h2 class="text-3xl font-bold mb-4">About This Project</h2>
+        <p class="text-lg mb-4">
+            This project aims to predict employee productivity in a garment manufacturing environment using machine learning.
+            The model is trained on the Garments Worker Productivity dataset, utilizing features such as team, targeted productivity,
+            standard minute value (SMV), overtime, and more to predict actual productivity.
+        </p>
+        <p class="text-lg mb-4">
+            The application uses a Flask backend with an XGBoost model for predictions. Users can input data through a web interface
+            to receive productivity predictions. The project includes data preprocessing, model training, and a user-friendly UI.
+        </p>
+        <p class="text-lg">
+            Built as a demonstration of machine learning and web development skills, this project showcases end-to-end development
+            from data analysis to deployment.
+        </p>
+    </div>
+</body>
+</html>
